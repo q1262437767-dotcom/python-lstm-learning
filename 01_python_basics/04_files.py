@@ -264,8 +264,6 @@ def save_and_load(data, filename="my_data.txt"):
             result.append(line.strip())
     print(f"从 {filename} 读回 {len(result)} 条数据")
     return result
-
-# 测试
 nums = [10, 25, 38, 42, 67]
 loaded = save_and_load(nums)
 print(f"原数据: {nums}")
