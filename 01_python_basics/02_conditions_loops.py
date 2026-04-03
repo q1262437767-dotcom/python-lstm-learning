@@ -161,6 +161,17 @@ for i, d in enumerate(weekly_data):
 
 # 练习3：你来试试
 # TODO: 用 for 循环打印 1~20 中所有能被3整除的数
+for i in range(1,21):
+    if i%3==0:
+        print( i)
+
 # TODO: 用 while 循环计算 1+2+3+...+100 的和
+a=0
+b=1
+while b<=100:
+    a+=b
+    b+=1
+print(f"\n{a}")
+
 
 print("\n✅ 第二课完成！下一课：函数与列表")

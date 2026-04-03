@@ -250,7 +250,36 @@ print("✏️ 动手练习")
 print("=" * 50)
 
 # TODO: 写一个函数，把一个列表保存到文件，再读回来
+def save_and_load(data, filename="my_data.txt"):
+    # 保存到文件
+    with open(filename, "w", encoding="utf-8") as f:
+        for item in data:
+            f.write(f"{item}\n")
+    print(f"已保存 {len(data)} 条数据到 {filename}")
+
+    # 从文件读回来
+    result = []
+    with open(filename, "r", encoding="utf-8") as f:
+        for line in f:
+            result.append(line.strip())
+    print(f"从 {filename} 读回 {len(result)} 条数据")
+    return result
+
+# 测试
+nums = [10, 25, 38, 42, 67]
+loaded = save_and_load(nums)
+print(f"原数据: {nums}")
+print(f"读回的: {loaded}")
+
 # TODO: 用 try-except 处理用户输入：让用户输入一个数字，如果不是数字就提示重新输入
+while True:
+    user_input = input("请输入一个数字: ")
+    try:
+        num = float(user_input)
+        print(f"你输入的数字是: {num}，是数字")
+        break
+    except ValueError:
+        print("输入的不是数字，请重新输入！")
 
 print("""
 Python 基础四课全部完成！📚

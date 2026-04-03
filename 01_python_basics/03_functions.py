@@ -223,6 +223,14 @@ print(f"\n危险天数编号: {danger_list}")
 
 # 练习3：你来试试
 # TODO: 写一个函数 celsius_to_fahrenheit(c)，把摄氏度转为华氏度
+def celsius_to_fahrenheit(c):
+    return c*1.8+32
+print(f"\n{celsius_to_fahrenheit(50)}")
+print(celsius_to_fahrenheit(100))
+
 # TODO: 用字典存储3门课的成绩，计算平均分
+scores = {"数学": 85, "英语": 72, "Python": 93}
+average = sum(scores.values()) / len(scores)
+print(f"\n平均分: {average:.1f}")
 
 print("\n✅ 第三课完成！下一课：文件读写与异常处理")
